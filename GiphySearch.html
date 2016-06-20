@@ -1,0 +1,141 @@
+<html>
+
+<head>
+    <title>Giphy roulette</title>
+
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="giphy.css">
+    <link href="https://fonts.googleapis.com/css?family=Farsan" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <h1 class="text-center">Sniphy: Giphy snippets</h1>
+</header>
+
+<div class="jumbotron container text-center">
+    <div class="text-center">Search results</div>
+    <div id="buttons"></div>
+    <div class="banner"><h4 class="text-center">Search for Sniphies</h4>
+      <form id="giphyButton" class="text-center">
+        <label for="giphySearch">
+        </label>
+        <input type="text" id="giphySearch" class="text-center">
+        <input id="findGiphy" type="submit" value="Kill Time Now" class="btn btn-info btn-lg">
+        <input id="clearGiphy" type="submit" value="Reset search results" class="btn btn-danger btn-lg">
+      </form>
+
+    </div>
+    <div id="images" class="text-center contain">
+    </div>
+
+  <div class="right">
+    <h6>
+      <p>Giphy Roulette!</p>
+      <p>Type in a search</p>
+      <p>Or press the button for a random gif</p>
+      <p>Share Giphies with link below: </p>
+    </h6>
+
+    <code><h6 id="giphyURL"></h6></code>
+  </div>
+
+</div>
+
+<footer>
+  <h6 class="text-center">2016 Sid Jay</h6>
+</footer>
+
+    <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+    <script type="text/javascript">
+
+    var categories =[];
+
+    function makeButtons(){
+      $('#buttons').empty();
+      for(var i=0; i < categories.length; i++){
+        var buttons = $("<button>");
+        buttons.addClass('letter-button letter letter-button-color');
+        buttons.data('let', categories[i]);
+        buttons.text(categories[i]);
+        $("#buttons").append(buttons);
+
+        if(i > 25){
+          buttons.remove();
+        }
+    };
+    }
+
+    $('#findGiphy').click(function(){
+
+        search = $('#giphySearch').val();
+        categories.push(search);
+        makeButtons();
+
+        var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=" + search;
+
+        $.ajax({
+          url: queryURL,
+          method: 'GET'
+        })
+
+            .done(function(response) {
+                var imageUrl = response.data.image_url;
+                var giphyImage = $("<img>");
+                var p = $("<p>");
+                giphyImage.attr('src', imageUrl);
+                giphyImage.attr('alt', 'giphy image');
+                $("#images").empty();
+                $("#images").prepend(p);
+                $('#images').prepend(giphyImage);
+                $('#giphyURL').empty();
+                $('#giphyURL').append(imageUrl);
+            });
+            return false;
+    });
+
+    $('#clearGiphy').click(function(){
+      categories.remove();
+      return false;
+    });
+
+    function workButtons(){
+      $('#buttons').click(function(){
+           var thisClick = $(this).text();
+           console.log(thisClick);
+
+           var clickURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=" + thisClick;
+
+           $('#images').empty();
+
+           $.ajax({url: clickURL,
+                   method: 'GET'
+           })
+
+                 .done(function(response){
+                   var APIresults = response.data;
+                     var imageUrl = APIresults.image_url;
+                     var giphyImage = $(
+                       "<img>");
+                     var p = $("<p>");
+                     giphyImage.attr('src', imageUrl);
+                     giphyImage.attr('alt', 'giphy image');
+                     $("#images").empty();
+                     $("#images").prepend(p);
+                     $('#images').prepend(giphyImage);
+                     $('#giphyURL').empty();
+                     $('#giphyURL').append(imageUrl);
+                 });
+       });
+    }
+
+  $(document).on('click', '.letter-button.letter.letter-button-color', workButtons);
+
+    makeButtons();
+    </script>
+</body>
+
+</html>

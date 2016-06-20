@@ -1,0 +1,54 @@
+body{
+  background-color: #AFEEEE;
+  color: #4B474B;
+  font-family: 'Farsan', cursive;
+}
+
+header, footer, .banner{
+  font-family: 'Helvetica Neue';
+  background-color: #2264A2;
+  color: #F8F8F2;
+  padding: 2.5%;
+}
+
+img{
+  width: 50%;
+  height:inherit;
+  float:left;
+}
+
+.right{
+  float: right;
+}
+
+input#giphysearch.text-center{
+  color: #205B59;
+  font-size: 20px;
+}
+
+.jumbotron{
+  background-color: #D7F6F6;
+  margin: 2.5%;
+  padding: 5%;
+  border: solid;
+  border-color: #9DD6D6;
+}
+
+.contain {
+  object-fit: contain;
+}
+
+.letter {
+  border-style: solid;
+  padding: 2px;
+  /*float: left;*/
+  margin: 2px;
+}
+.letter-button-color {
+  color: #F8F8F2;
+  background-color: #2264A2;
+  border: solid;
+  border-color: #9DD6D6;
+  font-family: 'Helvetica Neue';
+  font-size: 12px;
+}
