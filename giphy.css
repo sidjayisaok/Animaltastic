@@ -52,3 +52,16 @@ input#giphysearch.text-center{
   font-family: 'Helvetica Neue';
   font-size: 12px;
 }
+
+@media screen and (max-width: 480px){
+  img, video{
+    width: 50%;
+    height:inherit;
+    margin-top: 2.5%;
+    margin-left: 25%;
+}
+  h6#giphyURL{
+    font-size: 8px;
+  }
+  }
+}
