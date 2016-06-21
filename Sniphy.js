@@ -26,7 +26,7 @@ var categories =[];
           //this returns a button based on the search result
 		  makeButtons();
 		  //setup the link for the API		
-          var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=" + search;
+          var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=" + search;
 		  //AJAX call	
           $.ajax({
             url: queryURL,
@@ -73,7 +73,7 @@ var categories =[];
              var thisClick = $(this).text();
              console.log(thisClick);
 			 //url for API
-             var clickURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=" + thisClick;
+             var clickURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=" + thisClick;
 
              $('#images').empty();
 
