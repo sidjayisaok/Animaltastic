@@ -11,7 +11,7 @@ header, footer, .banner{
   padding: 2.5%;
 }
 
-img{
+img, video{
   width: 50%;
   height:inherit;
   float:left;
@@ -19,6 +19,7 @@ img{
 
 .right{
   float: right;
+  font-size: none;
 }
 
 input#giphysearch.text-center{
@@ -41,7 +42,6 @@ input#giphysearch.text-center{
 .letter {
   border-style: solid;
   padding: 2px;
-  /*float: left;*/
   margin: 2px;
 }
 .letter-button-color {
