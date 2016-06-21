@@ -22,7 +22,7 @@ img, video{
   font-size: none;
 }
 
-input#giphysearch.text-center{
+input{
   color: #205B59;
   font-size: 20px;
 }
