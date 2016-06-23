@@ -63,5 +63,11 @@ input{
   h6#giphyURL{
     font-size: 8px;
   }
+
+  .right{
+    float: none;
+    font-size: 10px;
+    margin-top: 60%;
   }
-}
+
+  }
