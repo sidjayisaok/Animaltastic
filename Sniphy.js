@@ -1,7 +1,7 @@
 //basic array
 var categories =[];
 
-	  //this creates our buttons from search results	
+	  //this creates our buttons from search results
       function makeButtons(){
         $('#buttons').empty();
         for(var i=0; i < categories.length; i++){
@@ -10,8 +10,8 @@ var categories =[];
           buttons.data('let', categories[i]);
           buttons.text(categories[i]);
           $("#buttons").append(buttons);
-				
-		  //this limits the amount of buttons to 25	 	
+
+		  //this limits the amount of buttons to 25
           if(i > 25){
             buttons.remove();
           }
@@ -25,17 +25,18 @@ var categories =[];
           categories.push(search);
           //this returns a button based on the search result
 		  makeButtons();
-		  //setup the link for the API		
+		  //setup the link for the API
           var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=" + search;
-		  //AJAX call	
+		  //AJAX call
           $.ajax({
             url: queryURL,
             method: 'GET'
           })
-			  //this adds a random gif/mp4 based on the search parameter	
+			  //this adds a random gif/mp4 based on the search parameter
               .done(function(response) {
-                  var imageUrl = response.data.image_url;
-                  var imageMP4 = response.data.image_mp4_url
+                  var APIresults = response.data;
+                  var imageUrl = APIresults.image_url;
+                  var imageMP4 = APIresults.image_mp4_url
                   var giphyImage = $("<img>");
                   var p = $("<p>");
                   giphyImage.attr('src', imageUrl);
@@ -62,12 +63,12 @@ var categories =[];
               });
               return false;
       });
-	  //this removes the search buttons	
+	  //this removes the search buttons
       $('#clearGiphy').click(function(){
         categories.remove();
         return false;
       });
-	  //this makes the buttons return a gif when clicking them	
+	  //this makes the buttons return a gif when clicking them
       function workButtons(){
         $('#buttons').unbind().on('click', 'button', function(){
              var thisClick = $(this).text();
