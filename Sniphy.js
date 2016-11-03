@@ -56,7 +56,7 @@
           //this returns a button based on the search result
 		  makeButtons();
 		  //setup the link for the API
-          const queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=" + search;
+          const queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=" + search;
 		  //AJAX call
           $.ajax({
             url: queryURL,
@@ -76,7 +76,7 @@
         $('#buttons').unbind().on('click', 'button', ()=>{
              let thisClick = $(this).text();
 			 //url for API
-             const clickURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=" + thisClick;
+             const clickURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=" + thisClick;
 
              $('#images').empty();
 
