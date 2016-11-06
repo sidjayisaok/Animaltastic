@@ -4,6 +4,19 @@ body{
   font-family: 'Farsan', cursive;
 }
 
+body:before{
+  background-image: url("shells.jpg");
+  background-attachment: fixed;
+  content: "";
+  height: 150%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: .1;
+  z-index: 0;
+}
+
 header, footer, .banner{
   font-family: 'Helvetica Neue';
   background-color: #2264A2;
@@ -12,9 +25,9 @@ header, footer, .banner{
 }
 
 img, video{
-  width: 50%;
+  width: 100%;
   height:inherit;
-  float:left;
+  margin: 2%;
 }
 
 .right{
@@ -25,6 +38,10 @@ img, video{
 input{
   color: #205B59;
   font-size: 20px;
+}
+
+input[type=submit]{
+  margin: 1.5%;
 }
 
 .jumbotron{
@@ -43,6 +60,7 @@ input{
   border-style: solid;
   padding: 2px;
   margin: 2px;
+  z-index: 1;
 }
 .letter-button-color {
   color: #F8F8F2;
@@ -55,13 +73,11 @@ input{
 
 @media screen and (max-width: 768px){
   img, video{
-    width: 50%;
+    width: 100%;
     height:inherit;
-    margin-top: 2.5%;
-    margin-left: 25%;
 }
-  h6#giphyURL{
-    font-size: 8px;
+  #giphyURL{
+    font-size: 6px;
   }
 
   .right{

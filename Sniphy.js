@@ -87,7 +87,7 @@
              });
          });
       }
-	//function to execute the button
+	//function to execute the aggregated button
     $(document).on('click', 'input', workButtons);
 
     makeButtons();

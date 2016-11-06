@@ -17,35 +17,47 @@
 <body>
 
 <header>
-  <h1 class="text-center animated fadeInUp">Sniphy: Giphy snippets</h1>
+  <h3 class="text-center animated fadeInUp">Sniphy: Giphy snippets</h3>
 </header>
 
 <div class="jumbotron container text-center">
-    <div class="text-center animated fadeInUp">Search results</div>
-    <div id="buttons"></div>
-    <div class="banner"><h4 class="text-center animated fadeInUp">Search for Sniphies</h4>
+    <div class="banner"><h6 class="text-center animated fadeInUp">Search for Sniphies</h6>
       <form id="giphyButton" class="text-center">
         <label for="giphySearch">
         </label>
         <input type="text" id="giphySearch" class="text-center animated fadeInUp">
-        <input id="findGiphy" type="submit" value="Kill Time Now" class="btn btn-info btn-lg animated fadeInUp">
-        <input id="clearGiphy" type="submit" value="Reset search results" class="btn btn-danger btn-lg animated fadeInUp">
+        <input id="findGiphy" type="submit" value="Search" class="btn btn-info btn-sm animated fadeInUp">
+        <input id="clearGiphy" type="submit" value="Reset" class="btn btn-danger btn-sm animated fadeInUp">
       </form>
 
-    </div>
-    <div id="images" class="text-center contain">
+    <div class="col-md-4">
     </div>
 
-  <div class="right animated fadeInUp">
-    <h6>
-      <p>Giphy Roulette!</p>
-      <p>Type in a search</p>
-      <p>Or press the button for a random gif</p>
-      <p>Share Giphies with link below: </p>
-    </h6>
+    <div id="giphyURL" class="col-md-4"></div>
 
-    <code><h6 id="giphyURL"></h6></code>
-  </div>
+    <div class="col-md-4">
+    </div> 
+
+
+    </div>
+
+    <div class="col-md-4">
+    </div> 
+
+    <div id="images" class="text-center contain col-md-4">
+      <img src="http://media4.giphy.com/media/6DPqQoHys9uY8/giphy.gif"></img>
+    </div>
+
+    <div class="col-md-4">
+    </div>
+
+    <div class="col-md-4">
+    </div>
+
+    <div id="buttons" class="col-md-4"></div>
+
+    <div class="col-md-4">
+    </div>
 
 </div>
 
@@ -54,8 +66,8 @@
 </footer>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="Sniphy.js">
-    </script>
+    <script src="Sniphy.js"></script>
+    <script src="animate.js"></script>
 </body>
 
 </html>
