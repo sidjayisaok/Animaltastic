@@ -17,7 +17,7 @@
     $('#giphyURL').empty();
     $('#giphyURL').append("<div><a href=" + imageUrl + ">" + imageUrl + "</a></div>");
 		//this part handles the MP4 logic
-    $('#images').on('click', 'img', ()=>{
+    $('#images').on('click', 'img', function(){
       let giphyVideo = $("<video>");
       giphyVideo.attr('src', imageMP4);
       giphyVideo.attr('type', 'video/MP4');
@@ -50,7 +50,7 @@
       }
 
 	  //this executes our basic search via the form and button
-      $('#findGiphy').unbind().on('click', ()=>{
+      $('#findGiphy').unbind().on('click', function(){
           search = $('#giphySearch').val();
           categories.push(search);
           //this returns a button based on the search result
@@ -67,7 +67,7 @@
           return false;
       });
       //this resets the page
-      $('#clearGiphy').on('click', ()=>{
+      $('#clearGiphy').on('click', function(){
         location.reload();
         return false;
       });
