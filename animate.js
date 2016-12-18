@@ -1,19 +1,31 @@
-$(function(){
-    let flipClass = "animated zoomOut";
-    let tadaClass = 'animated pulse';
-    let endClass ='webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+//variables used
+var flipClass = "animated zoomOut";
+var tadaClass = 'animated rubberBand';
+var findGiphy = '#findGiphy';
+var clearGiphy = '#clearGiphy';
 
-    $('.btn-sm').on({
-        'click': ()=>{
-            $('.btn-sm').addClass(flipClass).one(endClass, function(){
-                $(this).removeClass(flipClass);
+  //DRY version to control image animation
+function logicAnim(param, classA, classB){
+
+    var endClass ='webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+
+     $(param).on({
+        'click': function(){
+            $(param).addClass(classA).one(endClass, function(){
+                $(this).removeClass(classA);
             })
         },
 
-        'mouseover': ()=>{
-            $('.btn-sm').addClass(tadaClass).one(endClass, function(){
-                $(this).removeClass(tadaClass);
+        'mouseover': function(){
+            $(param).addClass(classB).one(endClass, function(){
+                $(this).removeClass(classB);
             })
         }
     });
-});
+}
+
+//call function
+logicAnim(findGiphy, flipClass, tadaClass);
+logicAnim(clearGiphy, flipClass, tadaClass); 
+
+
