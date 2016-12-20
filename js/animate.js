@@ -4,7 +4,7 @@ var tadaClass = 'animated rubberBand';
 var findGiphy = '#findGiphy';
 var clearGiphy = '#clearGiphy';
 
-  //DRY version to control image animation
+  //DRY version to control button animation
 function logicAnim(param, classA, classB){
 
     var endClass ='webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';

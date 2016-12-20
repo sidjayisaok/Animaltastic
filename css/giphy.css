@@ -1,15 +1,19 @@
 body{
   background-color: #AFEEEE;
   color: #4B474B;
-  font-family: 'Farsan', cursive;
+  font-family: 'Righteous', cursive;
 }
 
 a{
   color: #F9F9F9;
 }
 
+a:hover {
+  color: #AAAAFF;
+}
+
 body:before{
-  background-image: url("shells.jpg");
+  background-image: url("../assets/shells.jpg");
   background-attachment: fixed;
   content: "";
   height: 150%;
@@ -22,10 +26,10 @@ body:before{
 }
 
 header, footer, .banner{
-  font-family: 'Helvetica Neue';
   background-color: #2264A2;
   color: #F8F8F2;
   padding: 2.5%;
+  box-shadow: 1px 2px 3px;
 }
 
 img, video{
@@ -54,6 +58,7 @@ input[type=submit]{
   padding: 5%;
   border: solid;
   border-color: #9DD6D6;
+  box-shadow: 1px 2px 3px;
 }
 
 .contain {
@@ -71,8 +76,14 @@ input[type=submit]{
   background-color: #2264A2;
   border: solid;
   border-color: #9DD6D6;
-  font-family: 'Helvetica Neue';
   font-size: 12px;
+  box-shadow: 1px 2px 3px;
+}
+
+.letter-button-color:hover {
+  color: #fff;
+  background-color: #ff0032;
+  border-color: #ff9999;
 }
 
 @media screen and (max-width: 768px){

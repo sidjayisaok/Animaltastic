@@ -1,6 +1,7 @@
 //basic array
     let categories =[];
 
+    //basic function to handle DRY requests
     const giphyReturn = (response)=>{
   	//this part handles the gif logic
     let APIresults = response.data;

@@ -4,13 +4,13 @@
 <head>
     <title>Giphy roulette</title>
 
-    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
     integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="giphy.css">
-    <link href="https://fonts.googleapis.com/css?family=Farsan" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/giphy.css">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -22,6 +22,7 @@
 
 <div class="jumbotron container text-center">
     <div class="banner"><h6 class="text-center animated fadeInUp">Search for Sniphies</h6>
+      
       <form id="giphyButton" class="text-center">
         <label for="giphySearch">
         </label>
@@ -30,44 +31,46 @@
         <input id="clearGiphy" type="submit" value="Reset" class="btn btn-danger btn-sm animated fadeInUp">
       </form>
 
-    <div class="col-md-4">
+      <div class="col-sm-4">
+      </div>
+
+      <div id="giphyURL" class="col-sm-4">
+      </div>
+
+      <div class="col-sm-4">
+      </div> 
+
     </div>
 
-    <div id="giphyURL" class="col-md-4"></div>
-
-    <div class="col-md-4">
+    <div class="col-sm-4">
     </div> 
 
-
-    </div>
-
-    <div class="col-md-4">
-    </div> 
-
-    <div id="images" class="text-center contain col-md-4">
+    <div id="images" class="text-center contain col-sm-4">
       <img src="http://media4.giphy.com/media/6DPqQoHys9uY8/giphy.gif"></img>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-sm-4">
     </div>
 
-    <div class="col-md-4">
+    <div class="col-sm-4">
     </div>
 
-    <div id="buttons" class="col-md-4"></div>
-
-    <div class="col-md-4">
+    <div id="buttons" class="col-sm-4">
     </div>
 
-</div>
+    <div class="col-sm-4">
+    </div>
+
+  </div>  
 
 <footer>
-  <h6 class="text-center">2016 Sid Jay. API courtesy of <a href="http://giphy.com">GIPHY</a></h6>
+  <h6 class="text-center">2016 Sid Jay. API courtesy of <a href="http://giphy.com">GIPHY</a>.</h6>
+
 </footer>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="Sniphy.js"></script>
-    <script src="animate.js"></script>
+    <script src="js/Sniphy.js"></script>
+    <script src="js/animate.js"></script>
 </body>
 
 </html>
