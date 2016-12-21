@@ -5,8 +5,16 @@
     const giphyReturn = (response)=>{
   	//this part handles the gif logic
     let APIresults = response.data;
+    // let newAPI = APIresults.replace(/http/i, 'https');
     let imageUrl = APIresults.image_url;
-    let imageMP4 = APIresults.image_mp4_url
+    let imageMP4 = APIresults.image_mp4_url;
+    //change http to https
+    if(!imageUrl.indexOf("https") > -1){
+      imageUrl = imageUrl.replace(/^http:\/\//i, 'https://');
+    }
+    else if(!imageMP4.indexOf("https") > -1){
+      imageMP4 = imageMP4.replace(/^http:\/\//i, 'https://');
+    };
     let giphyImage = $("<img>");
     let p = $("<p>");
 
@@ -73,7 +81,8 @@
         return false;
       });
      
-	  //this makes the buttons return a gif when clicking them, for some reason arrow function doesn't work in second part	
+	  //this makes the buttons return a gif when clicking them
+    //for some reason arrow function doesn't work in the callback	
       const workButtons = ()=>{
         $('#buttons').unbind().on('click', 'button', function(){
           let thisClick = $(this).text();
