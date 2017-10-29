@@ -97,6 +97,7 @@ input[type=submit] {
   img, video {
     width: 100%;
     height:inherit;
+    margin: 1% auto;
   }
 
   #giphyURL {

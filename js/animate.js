@@ -8,8 +8,9 @@ const clearGiphy = '#clearGiphy';
 const logicAnim = (param, classA, classB)=> {
      document.querySelector(param).addEventListener('click', addRemoveClass(param, classA));
 
-     document.querySelector(param).addEventListener('mouseover', addRemoveClass(param, classB));
+     document.querySelector(param).addEventListener('hover', addRemoveClass(param, classB));
 }
+
 
 const addRemoveClass = (param, myClass)=> {
 
@@ -17,7 +18,7 @@ const addRemoveClass = (param, myClass)=> {
 
     $(param).addClass(myClass).one(endClass, function(){
         $(this).removeClass(myClass);
-    })
+    });
 }
 
 //call function
