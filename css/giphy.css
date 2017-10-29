@@ -1,4 +1,4 @@
-a{
+a {
   color: #F9F9F9;
 }
 
@@ -6,13 +6,13 @@ a:hover {
   color: #AAAAFF;
 }
 
-body{
+body {
   color: #4B474B;
   font-family: 'Righteous', cursive;
   background: linear-gradient(#AFEEEE, #AFCCFF);
 }
 
-body:before{
+body:before {
   background-image: url("../assets/shells.jpg");
   background-attachment: fixed;
   content: "";
@@ -25,25 +25,25 @@ body:before{
   z-index: -1;
 }
 
-header, footer, .banner{
+header, footer, .banner {
   background-color: #2264A2;
   color: #F8F8F2;
   padding: 2.5%;
   box-shadow: 1px 2px 3px;
 }
 
-img, video{
+img, video {
   width: 100%;
   height:inherit;
   margin: 2%;
 }
 
-input{
+input {
   color: #205B59;
   font-size: 20px;
 }
 
-input[type=submit]{
+input[type=submit] {
   margin: 1.5%;
 }
 
@@ -51,13 +51,14 @@ input[type=submit]{
   object-fit: contain;
 }
 
-.jumbotron{
+.jumbotron {
   background-color: #D7F6F6;
-  margin: 2.5%;
+  margin: 2.5% auto;
   padding: 5%;
   border: solid;
   border-color: #9DD6D6;
   box-shadow: 1px 2px 3px;
+  min-height: 700px;
 }
 
 .letter {
@@ -66,11 +67,12 @@ input[type=submit]{
   margin: 2px;
   z-index: 1;
 }
+
 .letter-button-color {
   color: #F8F8F2;
   background-color: #2264A2;
-  border: solid;
-  border-color: #9DD6D6;
+  border: 1px solid #9DD6D6;
+  border-radius: 5px;
   font-size: 12px;
   box-shadow: 1px 2px 3px;
 }
@@ -81,24 +83,30 @@ input[type=submit]{
   border-color: #ff9999;
 }
 
-.right{
+.right {
   float: right;
   font-size: none;
 }
 
+.row {
+  min-height: 25%;
+}
+
 @media screen and (max-width: 768px){
-  img, video{
+
+  img, video {
     width: 100%;
     height:inherit;
-}
-  #giphyURL{
+  }
+
+  #giphyURL {
     font-size: 6px;
   }
 
-  .right{
+  .right {
     float: none;
     font-size: 10px;
     margin-top: 60%;
   }
 
-  }
+}

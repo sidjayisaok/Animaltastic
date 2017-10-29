@@ -1,31 +1,25 @@
 //variables used
-var flipClass = "animated zoomOut";
-var tadaClass = 'animated rubberBand';
-var findGiphy = '#findGiphy';
-var clearGiphy = '#clearGiphy';
+const flipClass = "animated zoomOut";
+const tadaClass = 'animated rubberBand';
+const findGiphy = '#findGiphy';
+const clearGiphy = '#clearGiphy';
 
   //DRY version to control button animation
-function logicAnim(param, classA, classB){
+const logicAnim = (param, classA, classB)=> {
+     document.querySelector(param).addEventListener('click', addRemoveClass(param, classA));
 
-    var endClass ='webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+     document.querySelector(param).addEventListener('mouseover', addRemoveClass(param, classB));
+}
 
-     $(param).on({
-        'click': function(){
-            $(param).addClass(classA).one(endClass, function(){
-                $(this).removeClass(classA);
-            })
-        },
+const addRemoveClass = (param, myClass)=> {
 
-        'mouseover': function(){
-            $(param).addClass(classB).one(endClass, function(){
-                $(this).removeClass(classB);
-            })
-        }
-    });
+    const endClass ='webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+
+    $(param).addClass(myClass).one(endClass, function(){
+        $(this).removeClass(myClass);
+    })
 }
 
 //call function
 logicAnim(findGiphy, flipClass, tadaClass);
-logicAnim(clearGiphy, flipClass, tadaClass); 
-
-
+logicAnim(clearGiphy, flipClass, tadaClass);

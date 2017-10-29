@@ -2,7 +2,7 @@
     let categories =[];
 
     //basic function to handle DRY requests
-    const giphyReturn = (response)=>{
+    const giphyReturn = (response)=> {
   	//this part handles the gif logic
     let APIresults = response.data;
     // let newAPI = APIresults.replace(/http/i, 'https');
@@ -80,9 +80,9 @@
         location.reload();
         return false;
       });
-     
+
 	  //this makes the buttons return a gif when clicking them
-    //for some reason arrow function doesn't work in the callback	
+    //for some reason arrow function doesn't work in the callback
       const workButtons = ()=>{
         $('#buttons').unbind().on('click', 'button', function(){
           let thisClick = $(this).text();
