@@ -3,7 +3,8 @@ a {
 }
 
 a:hover {
-  color: #AAAAFF;
+  color: #AAA;
+  text-decoration: none;
 }
 
 body {
@@ -51,6 +52,32 @@ input[type=submit] {
   object-fit: contain;
 }
 
+.curvedBanner {
+  border-radius: 5px;
+}
+
+#giphyWrapper {
+  display: block;
+  min-height: 285px;
+}
+
+.btn {
+  border-radius: 2px;
+  width: 100px;
+  text-align: center;
+}
+
+.btn-info, .btn-info:hover, .btn-info:active, .btn-info:visited {
+  background-color: #00FF00;
+  border: 1px solid #00F000;
+}
+
+
+.btn-danger, .btn-danger:hover, .btn-into:active, .btn-info:visited {
+  background-color: #00AAAA;
+  border: 1px solid #00A0A0;
+}
+
 .jumbotron {
   background-color: #D7F6F6;
   margin: 2.5% auto;
@@ -70,11 +97,12 @@ input[type=submit] {
 
 .letter-button-color {
   color: #F8F8F2;
-  background-color: #2264A2;
+  background-color: #003264;
   border: 1px solid #9DD6D6;
   border-radius: 5px;
   font-size: 12px;
   box-shadow: 1px 2px 3px;
+  width: 50px;
 }
 
 .letter-button-color:hover {
@@ -96,12 +124,14 @@ input[type=submit] {
 
   img, video {
     width: 100%;
-    height:inherit;
+    height: inherit;
     margin: 1% auto;
   }
 
   #giphyURL {
-    font-size: 6px;
+    font-size: 16px;
+    word-wrap: break-word;
+    text-align: center;
   }
 
   .right {
