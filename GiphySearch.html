@@ -30,21 +30,23 @@
           <label for="giphySearch" placeholder="Search Giphy">
           </label>
           <input type="text" id="giphySearch" class="text-center animated fadeInUp">
-          <input id="findGiphy" type="submit" value="Search" class="btn btn-info btn-sm animated fadeInUp">
-          <input id="clearGiphy" type="submit" value="Reset" class="btn btn-danger btn-sm animated fadeInUp">
+          <div class="row col-sm-12">
+
+            <div class="col-sm-4">&nbsp;</div>
+
+            <div class="col-sm-6">
+              <div class="row col-sm-12">
+                  <input id="findGiphy" type="submit" value="Search" class="btn btn-info btn-sm animated fadeInUp col-sm-4" />
+                  <div id="clearGiphy" class="btn btn-danger btn-sm animated fadeInUp col-sm-4">Reset</div>
+                  <div id="popGiphy" class="btn btn-default btn-sm animated fadeInUp col-sm-4">Pop out</div>
+              </div>
+            </div>
+
+            <div class="col-sm-2">&nbsp;</div>
+
+          </div>
         </form>
       </div>
-
-
-      <div class="col-sm-2">
-      </div>
-
-      <div id="giphyURL" class="col-sm-8">
-      </div>
-
-      <div class="col-sm-2">
-      </div>
-
     </div>
 
 
@@ -71,6 +73,26 @@
     <div class="col-sm-4">
     </div>
 
+  </div>
+
+  <!-- modal -->
+  <div class="giphy-modal">
+
+      <div class="row">
+        <div class="col-sm-12 btn btn-default close-button" id="close">&times;</div>
+      </div>
+      
+      <div class="row">
+          <div class="col-sm-2">
+            </div>
+        
+            <div id="giphyURL" class="col-sm-8">
+            </div>
+      
+            <div class="col-sm-2">
+            </div> 
+      </div>
+     
   </div>
 
 <footer>

@@ -24,7 +24,7 @@
     $("#images").prepend(p);
     $('#images').prepend(giphyImage);
     $('#giphyURL').empty();
-    $('#giphyURL').append("<div><a href=" + imageUrl + ">" + imageUrl + "</a></div>");
+    $('#giphyURL').append("<div><img src=" + imageUrl + " alt='popup'></div>");
 		//this part handles the MP4 logic
     $('#images').on('click', 'img', function(){
       let giphyVideo = $("<video>");
@@ -37,7 +37,7 @@
       $("#images").prepend(p);
       $('#images').prepend(giphyVideo);
       $('#giphyURL').empty();
-      $('#giphyURL').append("<div><a href=" + imageMP4 + ">" + imageMP4 + "</a></div>");
+      $('#giphyURL').append("<div><img src=" + imageMP4 + " alt='giphy link' /></div>");
     });
 }
 
@@ -102,3 +102,25 @@
   $(document).on('click', 'input', workButtons);
   //call to make buttons
   makeButtons();
+
+
+  //trigger modal
+    const param = document.getElementById('popGiphy');
+    const closeButton = document.getElementById('close');
+    const giphyModal = document.getElementsByClassName('giphy-modal')[0];
+
+    param.onclick = function(){
+      giphyModal.style.display = 'block';
+    };
+
+    closeButton.onclick = function(){
+      giphyModal.style.display = 'none';
+    };
+
+    window.onclick = function(){
+      if(event.target === giphyModal){
+        giphyModal.style.display = 'none';
+      }
+    };
+
+
