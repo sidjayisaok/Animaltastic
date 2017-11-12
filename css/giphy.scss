@@ -1,0 +1,212 @@
+a {
+    color: #F9F9F9;
+
+    &:hover {
+        color: #AAAAAA;
+        text-decoration: none;
+    }
+}
+  
+body {
+    color: #4B474B;
+    font-family: 'Righteous', cursive;
+    background: linear-gradient(#AFEEEE, #AFCCFF);
+
+    &:before {
+        background-image: url("../assets/shells.jpg");
+        background-attachment: fixed;
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: .1;
+        z-index: -1;
+    }
+}
+  
+  .giphy-modal {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,.75);
+  }
+  
+  #giphyURL {
+      img {
+        padding: 0% 25%;
+      }
+  }
+  
+  header, footer, .banner {
+    background-color: #2264A2;
+    color: #F8F8F2;
+    padding: 2.5%;
+    box-shadow: 1px 2px 3px;
+  }
+  
+  img, video {
+    width: 100%;
+    height:inherit;
+    margin: 2%;
+  }
+  
+  input {
+    color: #205B59;
+    font-size: 20px;
+  }
+  
+  input[type=submit] {
+    margin: 1.5%;
+  }
+  
+  .contain {
+    object-fit: contain;
+  }
+  
+  .curvedBanner {
+    border-radius: 5px;
+  }
+  
+  #giphyWrapper {
+    display: block;
+    min-height: 285px;
+  }
+
+  @mixin button-style($colorA, $colorB){
+      background-color: $colorA;
+      border: 1px solid $colorB;
+      transition: .5s;
+  }
+  
+  .btn {
+    border-radius: 2px;
+    width: 100px;
+    text-align: center;
+    margin: 1.5%;
+  }
+
+  .btn-info {
+    @include button-style(#00FF00, #00F000);
+
+    &:hover {
+        @include button-style(#00F000, #CCCCCC);
+    }
+
+    &:active {
+        @include button-style(#00AA00, #323232);
+    }
+
+    &:visited {
+        @include button-style(#00CC00, #00C000); 
+    }
+  }
+
+.btn-danger {
+    @include button-style(#00AAAA,#00A0A0);
+
+    &:hover {
+        @include button-style(#00A0A0, #CCCCCC);
+    }
+
+    &:active {
+        @include button-style(#007777, #323232);
+    }
+
+    &:visited {
+        @include button-style(#009999, #009090);
+    }
+}
+
+.btn-default {
+    @include button-style(#008888, #008080);
+    color: #ffffff;
+
+    &:hover {
+        @include button-style(#008080, #CCCCCC);
+    }
+
+    &:active {
+        @include button-style(#006666, #323232);
+    }
+
+    &:visited {
+        @include button-style(#007777, #007070);
+    }
+}
+
+.close-button, .close-button:hover, .close-button:active, .close-button:visited {
+background-color: rgba(0,0,0,0);
+border: none;
+color: #AFCCFF;
+font-size: 60px;
+}  
+  
+.jumbotron {
+    background-color: #D7F6F6;
+    margin: 2.5% auto;
+    padding: 5%;
+    border: solid;
+    border-color: #9DD6D6;
+    box-shadow: 1px 2px 3px;
+    min-height: 700px;
+  }
+  
+.letter {
+    border-style: solid;
+    padding: 2px;
+    margin: 2px;
+    z-index: 1;
+  }
+  
+.letter-button-color {
+    color: #F8F8F2;
+    background-color: #003264;
+    border: 1px solid #9DD6D6;
+    border-radius: 5px;
+    font-size: 12px;
+    box-shadow: 1px 2px 3px;
+    width: 50px;
+
+    &:hover {
+        color: #fff;
+        background-color: #ff0032;
+        border-color: #ff9999;
+    }
+
+  }
+  
+  .right {
+    float: right;
+    font-size: none;
+  }
+  
+  .row {
+    min-height: 25%;
+  }
+  
+  @media screen and (max-width: 768px){
+  
+    img, video {
+      width: 100%;
+      height: inherit;
+      margin: 1% auto;
+    }
+  
+    #giphyURL {
+      font-size: 16px;
+      word-wrap: break-word;
+      text-align: center;
+    }
+  
+    .right {
+      float: none;
+      font-size: 10px;
+      margin-top: 60%;
+    }
+  
+  }

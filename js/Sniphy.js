@@ -37,7 +37,7 @@
       $("#images").prepend(p);
       $('#images').prepend(giphyVideo);
       $('#giphyURL').empty();
-      $('#giphyURL').append("<div><img src=" + imageMP4 + " alt='giphy link' /></div>");
+      $('#giphyURL').append("<div><video src=" + imageMP4 + " type='video/MP4' autoplay loop controls></video></div>");
     });
 }
 
