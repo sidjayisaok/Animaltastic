@@ -3,6 +3,7 @@ const flipClass = "animated zoomOut";
 const tadaClass = 'animated rubberBand';
 const findGiphy = '#findGiphy';
 const clearGiphy = '#clearGiphy';
+const popGiphy = '#popGiphy';
 
   //DRY version to control button animation
 const logicAnim = (param, classA, classB)=> {
@@ -24,3 +25,4 @@ const addRemoveClass = (param, myClass)=> {
 //call function
 logicAnim(findGiphy, flipClass, tadaClass);
 logicAnim(clearGiphy, flipClass, tadaClass);
+logicAnim(popGiphy, flipClass, tadaClass);
